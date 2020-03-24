@@ -1,0 +1,78 @@
+    table.table thead>tr>th.sorting_asc,
+    table.table thead>tr>th.sorting_desc,
+    table.table thead>tr>th.sorting,
+    table.table thead>tr>td.sorting_asc,
+    table.table thead>tr>td.sorting_desc,
+    table.table thead>tr>td.sorting {
+      padding-right: 30px
+    }
+
+    table.table thead>tr>th:active,
+    table.table thead>tr>td:active {
+        outline: none
+    }
+
+    table.table thead .sorting,
+    table.table thead .sorting_asc,
+    table.table thead .sorting_desc,
+    table.table thead .sorting_asc_disabled,
+    table.table thead .sorting_desc_disabled {
+        cursor: pointer;
+        position: relative
+    }
+
+    table.table thead .sorting:before,
+    table.table thead .sorting:after,
+    table.table thead .sorting_asc:before,
+    table.table thead .sorting_asc:after,
+    table.table thead .sorting_desc:before,
+    table.table thead .sorting_desc:after,
+    table.table thead .sorting_asc_disabled:before,
+    table.table thead .sorting_asc_disabled:after,
+    table.table thead .sorting_desc_disabled:before,
+    table.table thead .sorting_desc_disabled:after {
+        position: absolute;
+        bottom: 0.9em;
+        display: block;
+        opacity: 0.3
+    }
+	table.table-sm thead .sorting:before,
+    table.table-sm thead .sorting:after,
+    table.table-sm thead .sorting_asc:before,
+    table.table-sm thead .sorting_asc:after,
+    table.table-sm thead .sorting_desc:before,
+    table.table-sm thead .sorting_desc:after,
+    table.table-sm thead .sorting_asc_disabled:before,
+    table.table-sm thead .sorting_asc_disabled:after,
+    table.table-sm thead .sorting_desc_disabled:before,
+    table.table-sm thead .sorting_desc_disabled:after {
+        bottom: 0.3em;
+    }
+
+    table.table thead .sorting:before,
+    table.table thead .sorting_asc:before,
+    table.table thead .sorting_desc:before,
+    table.table thead .sorting_asc_disabled:before,
+    table.table thead .sorting_desc_disabled:before {
+        right: 1em;
+        content: "\2191"
+    }
+
+    table.table thead .sorting:after,
+    table.table thead .sorting_asc:after,
+    table.table thead .sorting_desc:after,
+    table.table thead .sorting_asc_disabled:after,
+    table.table thead .sorting_desc_disabled:after {
+        right: 0.5em;
+        content: "\2193"
+    }
+
+    table.table thead .sorting_asc:before,
+    table.table thead .sorting_desc:after {
+        opacity: 1
+    }
+
+    table.table thead .sorting_asc_disabled:before,
+    table.table thead .sorting_desc_disabled:after {
+        opacity: 0
+    }

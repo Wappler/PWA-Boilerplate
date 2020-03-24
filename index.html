@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en-AU" is="dmx-app">
+
+<head>
+	<meta name="ac:route" content="/">
+	<base href="/">
+	<meta charset="UTF-8">
+	<title dmx-html="dvMetaData.data[0].title"></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="" dmx-bind:content="dvMetaData.data[0].description">
+
+	<link rel="stylesheet" href="bootstrap/4/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="manifest" href="manifest.json">
+	<link rel="icon" href="assets/icons/icon-72x72.png" type="image/png">
+	<link rel="stylesheet" href="fontawesome4/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+
+	<script src="dmxAppConnect/dmxAppConnect.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="dmxAppConnect/dmxBootstrap4Navigation/dmxBootstrap4Navigation.js" defer=""></script>
+	<script src="dmxAppConnect/dmxRouting/dmxRouting.js" defer=""></script>
+	<script src="dmxAppConnect/dmxFormatter/dmxFormatter.js" defer=""></script>
+	<script src="dmxAppConnect/dmxDataTraversal/dmxDataTraversal.js" defer=""></script>
+	<script src="dmxAppConnect/dmxBrowser/dmxBrowser.js" defer=""></script>
+	<script src="dmxAppConnect/dmxMoment/dmxMoment.js" defer=""></script>
+
+	<!-- ios support -->
+	<link rel="apple-touch-icon" href="assets/icons/icon-96x96.png">
+	<meta name="apple-mobile-web-app-status-bar" content="#111111">
+	<meta name="theme-color" content="#111111">
+</head>
+
+<body id="index">
+	<div is="dmx-browser" id="browser"></div>
+	<dmx-json-datasource id="jsonMetaData" is="dmx-serverconnect" url="json/metadata.json"></dmx-json-datasource>
+	<dmx-data-view id="dvMetaData" dmx-bind:data="jsonMetaData.data.metatags" filter="(id == browser.location.pathparts)"></dmx-data-view>
+	<dmx-datetime id="varDate" interval="days"></dmx-datetime>
+	<header class="bg-primary fixed-top">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<nav class="navbar navbar-expand-lg justify-content-end navbar-dark bg-primary pt-0 pb-0">
+						<a class="navbar-brand ml-auto" href="#">
+							<img src="assets/icons/icon-72x72.png" height="45" alt="PWA Logo">PWA</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1_collapse" aria-controls="navbar1_collapse" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse justify-content-end" id="navbar1_collapse">
+							<div class="navbar-nav">
+								<a class="nav-item nav-link active" href="./" id="navHome">Home</a>
+								<a class="nav-item nav-link" href="./about" id="navAbout">About</a>
+								<a class="nav-item nav-link" href="./services" id="navServices">Services</a>
+								<a class="nav-item nav-link" href="./products" id="navProducts">Products</a>
+								<a class="nav-item nav-link" href="./contact" id="navCobtact">Contact</a>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div is="dmx-route" path="/" url="_home.html" id="rteHome" exact></div>
+		<div is="dmx-route" path="/about" url="_about.html" id="rteAbout" exact></div>
+		<div is="dmx-route" path="/services" url="_services.html" id="rteServices" exact></div>
+		<div is="dmx-route" path="/products" url="_products.html" id="rteProducts" exact></div>
+		<div is="dmx-route" path="/contact" url="_contact.html" id="rteContact" exact></div>
+		<div is="dmx-route" path="/fallback" url="_fallback.html" id="rteFallback" exact></div>
+	</main>
+
+	<footer class="wappler-block bg-primary">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<nav class="navbar navbar-expand-lg p-0 navbar-dark bg-primary">
+						<span class="navbar-text p-2 d-none d-sm-block d-md-block small"><i class="fa fa-map-marker"></i> 1234 Street Name, City Name</span>
+						<span class="navbar-text p-2 small"><i class="fa fa-phone"></i> (800) 123-4567</span>
+						<span class="navbar-text p-2 d-none d-sm-block d-md-block small"><i class="fa fa-envelope"></i> mail@example.com</span>
+						<span class="navbar-text p-2 d-none d-sm-block d-md-block small ml-auto">&copy; Copyright {{varDate.datetime.getYear(varDate.datetime)}}. All Rights Reserved.</span>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="bootstrap/4/js/popper.min.js"></script>
+	<script src="bootstrap/4/js/bootstrap.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

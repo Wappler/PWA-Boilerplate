@@ -1,0 +1,34 @@
+{
+    "metatags": [
+        {
+            "id": "",
+            "title": "Welcome to Wappler Web Solutions",
+            "description": "With the vast knowledge of web techniques that Wappler Web Solutions has acquired over two decades of web design, we are able to meet the most demanding needs without the corporate price tag."
+        },
+        {
+            "id": "about",
+            "title": "A Wappler based web solutions company",
+            "description": "Wappler Web Solutions strives to develop quality web sites, using the latest available visual and Search Engine Optimisation techniques at an affordable price."
+        },
+        {
+            "id": "services",
+            "title": "Our Services",
+            "description": "Description for Services."
+        },
+        {
+            "id": "products",
+            "title": "Our Products",
+            "description": "Description for our Products."
+        },
+        {
+            "id": "contact",
+            "title": "Contact Wappler Web Solutions now!",
+            "description": "We’d love to hear from you. You can either reach out to us as a whole and one of our awesome team members will get back to you, or if you have a specific question reach out to one of our staff. We love getting email all day every day."
+        },
+        {
+            "id": "fallback",
+            "title": "This page cannot be viewed offline",
+            "description": "This page cannot be viewed offline."
+        }
+    ]
+}
