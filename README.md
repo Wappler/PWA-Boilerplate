@@ -1,5 +1,5 @@
 # Starter-Boilerplate
-An easy to use boilerplate to kickstart your Wappler project. The Boilerplate includes Single Page Application (SPA), Progressive Web App (WPA) and source files for Bootstrap for easy theming.
+An easy to use boilerplate to kickstart your Wappler project
 
 ## Installation
 1. Copy the URL <img src="_src/readme-img/copy-url.png">
