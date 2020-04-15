@@ -33,6 +33,10 @@ dmx.config({
         }
       ],
       "outputType": "array"
+    },
+    "varOnline": {
+      "meta": null,
+      "outputType": "boolean"
     }
   }
 });

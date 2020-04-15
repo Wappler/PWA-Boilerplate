@@ -1,0 +1,55 @@
+{
+  "projectName": "pwa",
+  "styleFile": "/css/style.css",
+  "assetsFolder": "/assets",
+  "frameworks": [
+    {
+      "name": "jquery_slim_33",
+      "type": "cdn"
+    },
+    {
+      "name": "fontawesome_4",
+      "type": "cdn"
+    },
+    {
+      "name": "bootstrap4",
+      "type": "cdn"
+    },
+    {
+      "name": "appConnect",
+      "type": "local"
+    }
+  ],
+  "projectType": "web",
+  "projectServerModel": "PHP",
+  "useRouting": true,
+  "routingHandler": "apache",
+  "targets": [
+    {
+      "access": "local",
+      "name": "localhost",
+      "remoteURL": "http://localhost/pwa",
+      "localFolder": "file:///C:/wamp/www/pwa"
+    },
+    {
+      "webServerPort": 8100,
+      "webServerLang": "PHP",
+      "PHPVersion": "7.3.x",
+      "databaseType": "mysql",
+      "databasePort": 9906,
+      "mySQLVersion": "8.0.x",
+      "mySQL_rootPassword": "SWD47JBm",
+      "mySQL_databaseName": "pwa",
+      "mySQL_username": "db_user",
+      "mySQL_password": "7d0NZq1Z",
+      "targetType": "docker",
+      "webServer": "apache",
+      "noSampleData": true,
+      "name": "localdocker",
+      "remoteURL": "http://localhost:8100"
+    }
+  ],
+  "activeTarget": "localhost",
+  "addBase": true,
+  "folder": "6d3fe05a-8140-4ace-9ebd-175824624716"
+}

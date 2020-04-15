@@ -1,0 +1,29 @@
+version: '3'
+services:
+  db:
+    image: 'mysql:8.0'
+    environment:
+      MYSQL_ROOT_PASSWORD: SWD47JBm
+      MYSQL_DATABASE: pwa
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: 7d0NZq1Z
+    volumes:
+      - './db_init:/docker-entrypoint-initdb.d'
+    ports:
+      - '9906:3306'
+    restart: always
+    command:
+      - '--character-set-server=utf8mb4'
+      - '--collation-server=utf8mb4_unicode_ci'
+      - '--default-authentication-plugin=mysql_native_password'
+  web:
+    image: wapplerio/php-7.3-apache
+    depends_on:
+      - db
+    volumes:
+      - '../../../:/var/www/html/'
+    ports:
+      - '8100:80'
+    restart: always
+    stdin_open: true
+    tty: true
