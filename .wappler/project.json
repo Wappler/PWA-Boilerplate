@@ -49,7 +49,7 @@
       "remoteURL": "http://localhost:8100"
     }
   ],
-  "activeTarget": "localhost",
+  "activeTarget": "localdocker",
   "addBase": true,
   "folder": "6d3fe05a-8140-4ace-9ebd-175824624716"
 }
