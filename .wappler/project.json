@@ -4,20 +4,24 @@
   "assetsFolder": "/assets",
   "frameworks": [
     {
+      "name": "appConnect",
+      "type": "local"
+    },
+    {
+      "name": "bootstrap4",
+      "type": "local"
+    },
+    {
       "name": "jquery_slim_33",
       "type": "cdn"
     },
     {
+      "name": "jquery_slim_34",
+      "type": "local"
+    },
+    {
       "name": "fontawesome_4",
       "type": "cdn"
-    },
-    {
-      "name": "bootstrap4",
-      "type": "cdn"
-    },
-    {
-      "name": "appConnect",
-      "type": "local"
     }
   ],
   "projectType": "web",
@@ -51,5 +55,6 @@
   ],
   "activeTarget": "localdocker",
   "addBase": true,
-  "folder": "6d3fe05a-8140-4ace-9ebd-175824624716"
+  "folder": "6d3fe05a-8140-4ace-9ebd-175824624716",
+  "designFramework": "bootstrap4"
 }
