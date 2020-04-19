@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-AU" is="dmx-app">
+<html lang="en-AU" is="dmx-app" class="h-100">
 
 <head>
 	<meta name="ac:route" content="/">
@@ -30,7 +30,7 @@
 	<meta name="theme-color" content="#111111">
 </head>
 
-<body id="index">
+<body id="index" class="h-100 d-flex flex-column">
 	<div is="dmx-browser" id="browser"></div>
 	<dmx-json-datasource id="jsonMetaData" is="dmx-serverconnect" url="json/metadata.json"></dmx-json-datasource>
 	<dmx-data-view id="dvMetaData" dmx-bind:data="jsonMetaData.data.metatags" filter="(id == browser.location.pathparts)"></dmx-data-view>
@@ -40,7 +40,7 @@
 			<div class="row">
 				<div class="col">
 					<nav class="navbar navbar-expand-lg justify-content-end navbar-dark bg-primary pt-0 pb-0">
-						<a class="navbar-brand ml-auto" href="#">
+						<a class="navbar-brand ml-auto" href="./">
 							<img src="assets/icons/icon-72x72.png" height="45" alt="PWA Logo">PWA</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1_collapse" aria-controls="navbar1_collapse" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
@@ -60,7 +60,7 @@
 		</div>
 	</header>
 
-	<main>
+	<main class="flex-grow-1 mt-5 pt-4">
 		<div is="dmx-route" path="/" url="_home.html" id="rteHome" exact></div>
 		<div is="dmx-route" path="/about" url="_about.html" id="rteAbout" exact></div>
 		<div is="dmx-route" path="/services" url="_services.html" id="rteServices" exact></div>
@@ -76,7 +76,7 @@
 					<nav class="navbar navbar-expand-lg p-0 navbar-dark bg-primary">
 						<span class="navbar-text p-2 d-none d-sm-block d-md-block small"><i class="fa fa-map-marker"></i> 1234 Street Name, City Name</span>
 						<span class="navbar-text p-2 small"><i class="fa fa-phone"></i> (800) 123-4567</span>
-						<span class="navbar-text p-2 d-none d-sm-block d-md-block small"><i class="fa fa-envelope"></i> mail@example.com</span>
+						<span class="navbar-text p-2 d-none d-sm-block d-md-block small reverse"> moc.elpmaxe@liam&nbsp;<i class="fa fa-envelope"></i></span>
 						<span class="navbar-text p-2 d-none d-sm-block d-md-block small ml-auto">&copy; Copyright {{varDate.datetime.getYear(varDate.datetime)}}. All Rights Reserved.</span>
 					</nav>
 				</div>

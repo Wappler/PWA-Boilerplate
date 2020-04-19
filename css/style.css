@@ -1,25 +1,3 @@
-html {
-    min-height: 100%;
-    overflow-y: scroll;
-}
-body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    min-height: 100vh;
-    font-family: 'Roboto';
-    color: $primary;
-}
-main {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-    margin-top: 60px;
-}
 span.reverse { 
     unicode-bidi: bidi-override;
     direction: rtl;
