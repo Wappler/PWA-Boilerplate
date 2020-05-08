@@ -1,4 +1,4 @@
-span.reverse { 
+.reverse { 
     unicode-bidi: bidi-override;
     direction: rtl;
 }
